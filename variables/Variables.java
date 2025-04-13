@@ -76,9 +76,9 @@ public class Variables {
             Para declarar uma constante, utilizamos a palavra reservada final.
          */
 
-        final int daysForWeeks = 7;
+        final int DAYS_FOR_WEEKS = 7;
 
-        System.out.println("O número de dias em uma semana é: " + daysForWeeks);
+        System.out.println("O número de dias em uma semana é: " + DAYS_FOR_WEEKS);
 
         /*
          * 6- VAR 
