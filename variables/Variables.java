@@ -5,7 +5,7 @@ public class Variables {
         // tipo -> nome -> atribuição de valor
         String name = "Vinicius R"; 
         
-        //  --> Tipos de dados primitivos <--
+        //  --> 1- Tipos de dados primitivos <--
 
         //Para validações de controle de estado(true -> false)
         boolean isBollean = true;
@@ -27,7 +27,7 @@ public class Variables {
         String nameTwo = "Francisco de Assis";
 
 
-        // --> OPERADORES ARITMÉTICOS(Parte 1)
+        // --> 2- OPERADORES ARITMÉTICOS(Parte 1)
         // + = Adição;
         // - = Subtração;
         // / = Divisão;
@@ -36,12 +36,32 @@ public class Variables {
 
         System.out.println(number4 + number5 * (number6 / number3) - number1);
 
-        // --> OPERADORES ARITMÉTICOS(Parte 2)
+        // --> 3- OPERADORES ARITMÉTICOS(Parte 2)
         //Incremento(++) = Incrementa o valor de uma variável em 1;
         //Decremento(--) = Decrementa o valor de uma variável em -1;
         //Atribuição aditiva(+=) = Soma e atribui o resultado de uma variável;
         //Atribuição subtrativa(-=) = Subtrai e atribui o resultado de uma variável;
 
         
+
+        // --> 4- TYPE CASTING <--
+        //Conversão de tipos de dados, para que possamos armazenar um tipo de dado em outro tipo de dado.
+        //Exemplo: int -> double, double -> int, float -> int, etc..
+
+        //IMPLICITO(WIDENING CONVERSION) = Conversão de um tipo de dado menor para um tipo de dado maior.
+        //Conversão de int para double
+
+        int smallNumber = 4;
+        long bigNumber = smallNumber;
+
+        System.out.println(bigNumber);
+
+        //EXPLICITO(NARROWING CONVERSION) = Conversão de um tipo de dado maior para um tipo de dado menor.
+        //Conversão de double para int
+        double bigDecimal = 4.5;
+
+        int smallDecimal = (int) bigDecimal; //Casting imprime 4s, pois o valor decimal é descartado.
+
+        System.out.println(smallDecimal);
     }
 }
