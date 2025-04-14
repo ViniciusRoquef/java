@@ -1,6 +1,6 @@
 package condicionales;
 
-public class Condicionales {
+public class Conditionals {
     public static void main(String[] args) {
         /*
          * Introdução a Operadores de comparação:
