@@ -51,7 +51,7 @@ public class Exercices2 {
             System.out.println("Acesso negado");
         }
 
-        scanner.close();
+        System.out.println("____Exercício 3 ____");
 
         /*
             *Exercício 3: Identificação de Paridade com Strings
@@ -61,6 +61,22 @@ public class Exercices2 {
             Depois de avaliar o número, tu vai colocar se é par ou impar em uma var.
             
          */
+
+        System.out.println("Digite um número inteiro no terminal: ");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+
+        String evenNumber = "Par";
+        String oddNumber = "Ímpar";
+
+        if (number % 2 == 0) {
+            System.out.println("Número " + evenNumber);
+        } else {
+            System.out.println("Número" + oddNumber);
+        }
+
+
+        System.out.println("____Exercício 4 ____");
 
         /*
             * Exercício 4: Identificação de Dia Útil
@@ -72,13 +88,53 @@ public class Exercices2 {
             
         */
 
+        System.out.println("insira no terminal o número de 1 a 7 correspondente a o dia da semana: ");
+
+        int dayForWeek = scanner.nextInt();
+
+        if (dayForWeek >= 1 && dayForWeek <= 7) {
+            switch (dayForWeek) {
+                case 1:
+                    System.out.println("Domingo, ou seja, não é um dia útil.");
+                    break;
+                case 2:
+                    System.out.println("Segunda-feira, ou seja, hoje é um dia útil.");
+                    break;
+                case 3:
+                    System.out.println("Terça-feira, ou seja, hoje é um dia útil.");
+                    break;
+                case 4:
+                    System.out.println("Quarta-feira, ou seja, hoje é um dia útil.");
+                    break;
+                case 5:
+                    System.out.println("Quinta-feira, ou seja, hoje é um dia útil.");
+                    break;
+                case 6:
+                    System.out.println("Sexta-feira, ou seja, hoje é um dia útil.");
+                    break;
+                case 7:
+                    System.out.println("Sábado, ou seja, não é um dia útil.");
+                    break;
+            }
+        } else System.out.println("Escolha um número entre 1 e 7. Tente novamente!");
+
+        System.out.println("____Exercício 5 ____");
         /*
             * Exercício 5: Verificação de Intervalo com AND
             Peça ao usuário para inserir um número. 
             Verifique se o número está no intervalo de 10 a 20, inclusive. 
             Se estiver, exiba "Dentro do intervalo". Caso contrário, exiba "Fora do intervalo".
          */
+        System.out.println("Insira um número entre 10 a 20");
+        int randomNumber = scanner.nextInt();
 
+        if (randomNumber >= 10 && randomNumber <= 20) {
+            System.out.println("Está dentro do intervalo");
+        } else {
+            System.out.println("Está fora do intervalo");
+        }
+
+        System.out.println("____Exercício 6 ____");
         /*
             *  Exercício 6: Classificação de Letra
             Peça ao usuário para inserir uma letra. 
@@ -87,6 +143,30 @@ public class Exercices2 {
             Considere tanto letras maiúsculas quanto minúsculas. 
          */
 
+        System.out.println("Insira uma letra no terminal:");
+        char letter = scanner.next().toLowerCase().charAt(0);
 
+        switch (letter) {
+            case 'a':
+                System.out.println("É uma vogal");
+                break;
+            case 'e':
+                System.out.println("É uma vogal");
+                break;
+            case 'i':
+                System.out.println("É uma vogal");
+                break;
+            case 'o':
+                System.out.println("É uma vogal");
+                break;
+            case 'u':
+                System.out.println("É uma vogal");
+                break;
+            default: 
+                System.out.println("É uma consoante");
+                break;
+        }
+
+        scanner.close();
     }
 }
