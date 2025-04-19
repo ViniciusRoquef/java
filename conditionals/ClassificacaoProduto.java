@@ -21,7 +21,7 @@ public class ClassificacaoProduto {
         
         Scanner scanner = new Scanner(System.in);
 
-        String productOne = "detergente"; 
+        String productOne = "detergente";
         String productTwo = "sabonete"; 
         String productThree = "escova"; 
 
@@ -50,7 +50,7 @@ public class ClassificacaoProduto {
                     break;
 
                 case 'n':
-                    System.out.println("Ok, encerrrando sistema");
+                    System.out.println("Ok, encerrando sistema");
                     break;
             
                 default:
