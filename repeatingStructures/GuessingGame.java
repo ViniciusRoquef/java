@@ -31,13 +31,15 @@ public class GuessingGame {
      */
     public static void guessingGame(int randomNumber) {
         Scanner scanner = new Scanner(System.in);
+        int attempts = 0;
 
         externo: 
         for(int i = 0; i <= 40; i++){
             int number = scanner.nextInt();
+            attempts++;
 
             if (number == randomNumber) {
-                System.out.println("Você acertou!");
+                System.out.println("Você acertou na tentativa: " + attempts);
                 break externo;
             } else if ( number < randomNumber) {
                 System.out.println("Você errou, o número é MAIOR que o digitado.");
