@@ -1,6 +1,8 @@
 package arrays;
 
 import java.sql.Array;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Lists {
     public static void main(String[] args) {
@@ -73,5 +75,63 @@ public class Lists {
                 System.out.println( "A linguagem foi encontrada!" + lenguage);
             }
         }
+
+        int limitNumber = 35;
+
+        for(int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > limitNumber) {
+                System.out.println("Numero maior que o limitNumber(35) " + numbers[i] );
+            }
+        }
+
+        /* 
+        * Método toString no arrays
+        * mais comulmente usado para debugs em arrays
+        */ 
+
+        String arraysList = Arrays.toString(numbers);
+
+        System.out.println(arraysList);
+
+
+        /*
+         * Criando arrays novos, dentro de novos arrays
+         * Método comum: Criar um novo array maior e copiar os elemetos, usar o ArrayList para manipulação dinâmica de elementos
+        */
+
+        //Adicioando da forma antiga adicionando ao final +1
+
+        int[] newArrayNumber = new int[numbers.length + 1];
+
+        for(int i = 0; i < numbers.length; i++) {
+            newArrayNumber[i] = numbers[i];
+        }
+
+        System.out.println( "O novo array é: " + Arrays.toString(newArrayNumber));
+
+        newArrayNumber[numbers.length - 1] = 32;
+
+        System.out.println( "O novo array é: " + Arrays.toString(newArrayNumber));
+
+        //Utilizando o método arrayCopy() para copiar dados de um array
+        System.out.println("____________________________________");
+
+        String[] novasFrtras = new String[fruits.length + 1];
+
+        System.arraycopy(fruits, 0, novasFrtras, 0, fruits.length);
+
+        System.out.println(Arrays.toString(novasFrtras));
+
+
+        //Usando o arrayList para copiar e adicionar itens a um array
+        System.out.println("____________________________________");
+        ArrayList<String> newListFruits = new ArrayList<>(Arrays.asList("Maça", "Uva", "Laranja"));
+
+        System.out.println(newListFruits);
+
+        newListFruits.add("Abacaxi");
+
+        System.out.println(newListFruits);
+
     }
 }
