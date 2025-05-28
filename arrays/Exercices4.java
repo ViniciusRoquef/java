@@ -24,7 +24,6 @@ public class Exercices4 {
          * Exercício 4: Substituir valores de um array com Condição
             Escreva um programa que receba um array de inteiros e substitua todos os valores por 0.
             Exiba o array antes e depois da modificação
-
       */
 
       System.out.println("_____________Exercicio 1 _______________");
