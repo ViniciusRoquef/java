@@ -24,6 +24,7 @@ public class Lists {
         fruits[4] = "Uva";
 
         System.out.println(fruits[3]);
+        System.out.println("____________________________________");
 
         //Loops em Arrays
 
@@ -32,6 +33,7 @@ public class Lists {
         for (String fruit : fruits) {
             System.out.println("A fruta da vez é: " + fruit);
         }
+        System.out.println("____________________________________");
 
         //Usando for
         int soma = 0;
@@ -39,6 +41,7 @@ public class Lists {
             soma += numbers[i];
             System.out.println("A soma dos números do array é: " + soma);
         }
+        System.out.println("____________________________________");
 
         //Concatenando frases com for
         String[] palavrasArray = { "Java", "é", "bom!"};
@@ -47,6 +50,7 @@ public class Lists {
         for (String palavra : palavrasArray) {
             System.out.println( phrase += palavra + ' ');
         }
+        System.out.println("____________________________________");
 
 
         //?For vs ForEach
@@ -66,6 +70,7 @@ public class Lists {
                 System.out.println("A soma dos números é: " + sum);
             }
         }
+        System.out.println("____________________________________");
 
         String[] courses = {"Javascript", "Java", "PHP", "C++", "Node", "Python"};
         
@@ -75,6 +80,7 @@ public class Lists {
                 System.out.println( "A linguagem foi encontrada!" + lenguage);
             }
         }
+        System.out.println("____________________________________");
 
         int limitNumber = 35;
 
@@ -83,6 +89,7 @@ public class Lists {
                 System.out.println("Numero maior que o limitNumber(35) " + numbers[i] );
             }
         }
+        System.out.println("____________________________________");
 
         /* 
         * Método toString no arrays
@@ -133,5 +140,38 @@ public class Lists {
 
         System.out.println(newListFruits);
 
+        System.out.println("____________________________________");
+        //Problemas com reference Trap
+        // Nada mais é que duas variáveis compartilhando do mesmo espaço de memória
+
+        int[] originalArray = {1,2,3};
+        System.out.println(Arrays.toString(originalArray));
+
+
+        int[] arrayCopy = originalArray;
+        arrayCopy[2] = 10;
+        System.out.println(Arrays.toString(arrayCopy));
+
+        // - Como evitar? (Usar o método clone())
+
+        int[] arrayClone = originalArray.clone();
+        arrayClone[1] = 100;
+
+        System.out.println(Arrays.toString(arrayClone));
+
+        System.out.println("____________________________________");
+        /*
+         * Array 2D -> Matrizes
+         * Criado com a sintaxe ex: int[][] exemple = {}
+         * o primeiro [] indica o array a ser acessado e o segundo [] indica o índex dele
+         */ 
+
+        int[][] exempleArray2D = {
+            { 1, 2, 3, 4 }, 
+            { 100, 200, 300 }
+        };
+
+        System.out.println(exempleArray2D[1][2]);
+        
     }
 }
