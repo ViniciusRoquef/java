@@ -26,7 +26,6 @@ import java.util.Scanner;
     5 - Fechar Scanner: Fechar o Scanner para liberar recursos.
  */
 
-
 public class PasswordValidator {
     public static void main(String[] args) {
         

@@ -1,0 +1,36 @@
+package indroductionOOP;
+
+public class POO {
+    public static void main(String[] args) {
+
+        //Para criar um objeto, primeiro você precisa instaciar o objeto desejado e atriuir um nome a ele
+        //Ex:
+        Car audi = new Car();
+
+        //Depois para acessar as propriedades/métodos do objeto, é necessario pegar o nome da instancia e colocar um ponto(.)
+        audi.mark = "Audi ";
+        audi.model = "Sedan";
+        audi.name = "A3";
+        audi.ageFrabrication = 2025;
+
+        audi.showCar();
+
+
+        //Instancinado método da classe
+        audi.starEngine();
+
+        audi.velocity(30);
+        audi.velocity(40);
+
+        //Propriedades privadas
+
+        Person viniPerson = new Person();
+
+        viniPerson.setCPF("10836653404");
+
+        viniPerson.setName("Vinicius");
+
+        System.out.println("O nome do usuário é " + viniPerson.getName() + " e o seu Cpf é:" + viniPerson.getCPF());
+
+    }
+}
