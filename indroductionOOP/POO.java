@@ -32,5 +32,14 @@ public class POO {
 
         System.out.println("O nome do usuário é " + viniPerson.getName() + " e o seu Cpf é:" + viniPerson.getCPF());
 
+        //Setters
+
+        Account NewAccount = new Account();
+
+        NewAccount.setCheckPerson("Vinicius");
+        NewAccount.setbalance(50);
+
+        NewAccount.getAccount();
+
     }
 }
