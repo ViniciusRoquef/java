@@ -41,5 +41,17 @@ public class POO {
 
         NewAccount.getAccount();
 
+        //Lógica com Getters e Setters
+
+        Product jeans = new Product();
+
+        jeans.setNameOfProduct("Calça jeans");
+        jeans.setPriceOfProduct(35);
+
+        //Métodos dentro de métodos
+        System.out.println(jeans.getDataOfProduct());
+
+        //Constructors
+        
     }
 }
