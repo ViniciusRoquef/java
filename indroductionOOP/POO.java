@@ -62,6 +62,25 @@ public class POO {
         Books books2 = new Books("Homem aranha", "Marvel", 1998);
         System.out.println(books2.getBooks());
 
+        //Exercicio 1
+        Smartphone iphone = new Smartphone();
+
+        iphone.marca = "Apple";
+        iphone.modelo = "Iphone 15";
+
+        iphone.ligar();
+
+        iphone.desligar();
+
+        iphone.usar(10);
+
+        Smartphone s10 = new Smartphone();
+
+        iphone.marca = "Samsung";
+        iphone.modelo = "S10";
+
+        s10.usar(15);
+
 
         //Exercício 2
         Studant estudante1 = new Studant();
