@@ -1,4 +1,4 @@
-package indroductionOOP;
+package indroductionPOO;
 
 public class EletronicProduct {
     /*

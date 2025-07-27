@@ -1,4 +1,4 @@
-package indroductionOOP;
+package indroductionPOO;
 
 public class POO {
     public static void main(String[] args) {
@@ -61,6 +61,12 @@ public class POO {
         //Info pega pelo metodo de Override
         Books books2 = new Books("Homem aranha", "Marvel", 1998);
         System.out.println(books2.getBooks());
+
+
+        //Encapsulamento de arrays
+
+        String[] alunos = {"Joaquin", "Ramon", "Ezequiel", "Maria Joaquina"};
+
 
         //Exercicio 1
         Smartphone iphone = new Smartphone();
