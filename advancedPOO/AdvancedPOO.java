@@ -24,5 +24,23 @@ public class AdvancedPOO {
 
         System.out.println(vinicius.equals(pedro));
         System.out.println(pedro.toString());
+
+        //4 - Usando Super
+
+        Employee funcionario1 = new Employee("Halsey", 3000);
+        Manager gerente1 = new Manager("Fabry", 5000, 1000);
+
+        funcionario1.displayEmployee();
+        gerente1.displayEmployee();
+        System.out.println(funcionario1.calculateSalary());
+        System.out.println(gerente1.calculateSalary());
+
+        //5 - Classes abstratas
+        Guitarra guitarra1 = new Guitarra("Guitarra geaninni");
+        guitarra1.touch();
+
+        //7 - Interfaces
+        CreditCard valor1 = new CreditCard();
+        valor1.Payment(300);
     }
 }
