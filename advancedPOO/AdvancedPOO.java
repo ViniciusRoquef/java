@@ -42,5 +42,10 @@ public class AdvancedPOO {
         //7 - Interfaces
         CreditCard valor1 = new CreditCard();
         valor1.Payment(300);
+
+        //8- Método defoult nas interfaces
+        AdvancedCalculator calc = new AdvancedCalculator();
+
+        System.out.println(calc.sum(30, 12) + calc.multiply(4, 5));
     }
 }
