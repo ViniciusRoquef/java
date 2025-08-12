@@ -116,6 +116,18 @@ public class Erros {
 
         }
 
+        // 8 - multicatch
+        // dentro do catch, os tipos de erros são separados por ou "|"
+        try {
+            
+            processarArquivo("asd");
+            
+        } catch (NullPointerException | IOException e) {
+            
+            System.out.println("Erro multicatch: " + e.getMessage());
+
+        }
+
 
 
     }   
