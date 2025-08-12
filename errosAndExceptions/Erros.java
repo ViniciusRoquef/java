@@ -1,7 +1,10 @@
 package errosAndExceptions;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Erros {
 
@@ -88,6 +91,22 @@ public class Erros {
             System.out.println(e.getMessage());
         }
 
+        // 6 - throws em métodos
+
+        try {
+            
+            processarArquivo("/var/www/arquivo.txt");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Erro: " + e.getMessage());
+        } catch(IOException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+
+        // 7 - Encadeamento de exceções
+        
+
+
     }   
 
     public static void validarIdade( int idade ) {
@@ -96,5 +115,21 @@ public class Erros {
         } else {
             System.out.println("Idade válida");
         }
+    }
+
+    public static void processarArquivo(String caminho) throws FileNotFoundException, IOException {
+
+        if(caminho == null || caminho.isEmpty()) {
+            throw new IOException("Caminho inválido.");
+        }
+
+        File arquivo = new File(caminho);
+
+        if(!arquivo.exists()) {
+            throw new FileNotFoundException("Arquivo não encontrado.");
+        }
+
+        System.out.println("Arquivo encontrado com sucesso!");
+
     }
 }
