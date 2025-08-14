@@ -1,2 +1,2 @@
-Criando novo texto dentro de um arquivo com BufferedWriter 
+Criando novo texto dentro de um arquivo com BufferedWriter
 Outro texto pulando linha dentro de um arquivo com BufferedWriter

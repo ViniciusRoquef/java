@@ -2,7 +2,7 @@ package readingFiles;
 
 import java.io.*;
 
-public class archive {
+public class Archive {
     public static void main(String[] args) {
         
         //1 - Leitura de arquivos
@@ -54,5 +54,21 @@ public class archive {
         } catch (Exception e) {
             System.out.println("Arquivo não pode ser criado.");
         }
+
+        //3 - Serialização de objetos;
+
+        People name = new People("Vincius", 23);
+        System.out.println(name.getName());
+
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(currentDir + "pessoa.ser"))) {
+            
+            oos.writeObject(name);
+
+            System.out.println("Objeto serializado com sucesso.");
+
+        } catch (Exception e) {
+            System.out.println("Erro ao serializar objeto: " + e.getMessage());
+        }
+
     }
 }
