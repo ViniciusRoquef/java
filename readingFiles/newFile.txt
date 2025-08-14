@@ -1,0 +1,2 @@
+Criando novo texto dentro de um arquivo 
+Outro texto pulando linha dentro de um arquivo

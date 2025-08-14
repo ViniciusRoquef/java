@@ -36,5 +36,23 @@ public class archive {
         } catch (Exception e) {
             System.out.println("Falha ao ler o arquivo txt" + e.getMessage());
         }
+
+        //2.1- Escrevendo arquivos com FileWriter
+        try(FileWriter newFile = new FileWriter(currentDir + "newFile.txt")) {
+            newFile.write("Criando novo texto dentro de um arquivo \n");
+            
+            newFile.write("Outro texto pulando linha dentro de um arquivo");
+        } catch (Exception e) {
+            System.out.println("Arquivo não pode ser criado.");
+        }
+
+        //2.2- Escrevendo arquivos com BufferedRead
+        try(BufferedWriter newFile2 = new BufferedWriter(new FileWriter(currentDir + "newFile2.txt"))) {
+            newFile2.write("Criando novo texto dentro de um arquivo com BufferedWriter");
+            newFile2.newLine();
+            newFile2.write("Outro texto pulando linha dentro de um arquivo com BufferedWriter");
+        } catch (Exception e) {
+            System.out.println("Arquivo não pode ser criado.");
+        }
     }
 }
