@@ -53,6 +53,49 @@ public class Generics {
         for(Integer numero : numeros3) {
             System.out.println(numero);
         }
+
+        // 5 - generics com collections
+        List<Integer> listaInteiros = new ArrayList<>();
+
+        listaInteiros.add(10);
+        listaInteiros.add(20);
+        listaInteiros.add(30);
+        listaInteiros.add(25);
+        // listaInteiros.add(30.1);
+
+        for(Number numero : listaInteiros) {
+            System.out.println(numero);
+        }
+
+        Set<String> conjuntoDePalavras = new HashSet<>();
+
+        conjuntoDePalavras.add("Java");
+        conjuntoDePalavras.add("Java");
+        conjuntoDePalavras.add("Generics");
+
+        for(String palavras : conjuntoDePalavras) {
+            System.out.println(palavras);
+        }
+
+        Map<String, Integer> mapaDeIdades = new HashMap<>();
+
+        mapaDeIdades.put("Matheus", 33);
+        mapaDeIdades.put("Maria", 21);
+        mapaDeIdades.put("João", 18);
+
+        for(Map.Entry<String, Integer> entrada : mapaDeIdades.entrySet()) {
+            System.out.println(entrada.getKey() + " tem " + entrada.getValue() + " anos de idade.");
+        }
+
+        //6- Generics com interfaces
+
+        Storage valor1 = new StorageText();
+        valor1.addData("Café");
+        System.out.println(valor1.viewData());
+
+        Storage valor2 = new StorageNumber();
+        valor2.addData(34);
+        System.out.println(valor2.viewData());
     }
 
     public static<T extends Comparable<T>> T getGreaterValue( T value1, T value2) {
